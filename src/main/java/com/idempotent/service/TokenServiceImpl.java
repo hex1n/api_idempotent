@@ -21,7 +21,7 @@ import java.util.UUID;
 @Service
 @Transactional(readOnly = true)
 public class TokenServiceImpl implements TokenService {
-    private static final String API_IDEMPOTENT_TOKEN_NAME = "apiIdempotentToken";
+    private static final String API_IDEMPOTENT_TOKEN_NAME = "token";
 
     @Resource
     private RedisUtil redisUtil;

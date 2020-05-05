@@ -1,15 +1,10 @@
 package com.idempotent.intercepter;
 
-import com.idempotent.annotation.Idempotent;
 import com.idempotent.service.TokenService;
 import org.springframework.stereotype.Component;
-import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.lang.reflect.Method;
 
 /**
  * @Author hex1n
@@ -21,7 +16,7 @@ public class TokenInterceptor extends HandlerInterceptorAdapter {
     @Resource
     private TokenService tokenService;
 
-    @Override
+   /* @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         if (!(handler instanceof HandlerMethod)) {
             return true;
@@ -37,5 +32,5 @@ public class TokenInterceptor extends HandlerInterceptorAdapter {
 
     private void check(HttpServletRequest request) {
         tokenService.checkToken(request);
-    }
+    }*/
 }
